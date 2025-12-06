@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 API</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <section class="nav-history">
+            <div>
+                <button id="btnBack">Назад</button>
+                <button id="btnForward">Вперёд</button>
+            </div>
+
+            <div class="nav-links">
+                <button class="nav-link" data-page="home">Главная</button>
+                <button class="nav-link" data-page="canvas">Canvas</button>
+                <button class="nav-link" data-page="worker">Web Worker</button>
+            </div>
+        </section>
+
+        <div class="pages">
+
+            <section id="page-home" class="page active">
+                <h2>Главная</h2>
+            </section>
+
+            <section id="page-canvas" class="page">
+                <h2>Canvas</h2>
+
+                <div id="canvasContainer">
+                    <canvas id="myCanvas" width="500" height="300"></canvas>
+                </div>
+
+                <div class="canvas-buttons">
+                    <button id="btnStartAnimation">Запустить</button>
+                    <button id="btnStopAnimation">Остановить</button>
+                </div>
+            </section>
+
+            <section id="page-worker" class="page">
+                <h2>Web Worker</h2>
+
+                <div class="worker-controls">
+                    <input type="number" id="workerInput" placeholder="Введите N">
+                    <button id="btnStartWorker">Старт</button>
+                </div>
+
+                <div id="workerResult" class="worker-result"></div>
+            </section>
+
+        </div>
+
+        <div id="statusMessage"></div>
+
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
